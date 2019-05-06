@@ -14,6 +14,9 @@
 		883E073C227F326A00273107 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 883E073A227F326A00273107 /* LaunchScreen.storyboard */; };
 		883E0747227F326A00273107 /* PazhgSoundPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883E0746227F326A00273107 /* PazhgSoundPlayerTests.swift */; };
 		883E0752227F326A00273107 /* PazhgSoundPlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883E0751227F326A00273107 /* PazhgSoundPlayerUITests.swift */; };
+		888270E2227FF519008817DF /* Rock.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 888270DF227FF518008817DF /* Rock.m4a */; };
+		888270E3227FF519008817DF /* Music.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 888270E0227FF518008817DF /* Music.m4a */; };
+		888270E4227FF519008817DF /* Metal.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 888270E1227FF518008817DF /* Metal.m4a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		883E074D227F326A00273107 /* PazhgSoundPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PazhgSoundPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		883E0751227F326A00273107 /* PazhgSoundPlayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PazhgSoundPlayerUITests.swift; sourceTree = "<group>"; };
 		883E0753227F326A00273107 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		888270DF227FF518008817DF /* Rock.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rock.m4a; sourceTree = "<group>"; };
+		888270E0227FF518008817DF /* Music.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Music.m4a; sourceTree = "<group>"; };
+		888270E1227FF518008817DF /* Metal.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Metal.m4a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +108,10 @@
 				883E0735227F326800273107 /* Main.storyboard */,
 				883E0738227F326A00273107 /* Assets.xcassets */,
 				883E073A227F326A00273107 /* LaunchScreen.storyboard */,
+				888270DE227FF47B008817DF /* Music */,
+				888270E1227FF518008817DF /* Metal.m4a */,
+				888270E0227FF518008817DF /* Music.m4a */,
+				888270DF227FF518008817DF /* Rock.m4a */,
 				883E073D227F326A00273107 /* Info.plist */,
 			);
 			path = PazhgSoundPlayer;
@@ -123,6 +133,13 @@
 				883E0753227F326A00273107 /* Info.plist */,
 			);
 			path = PazhgSoundPlayerUITests;
+			sourceTree = "<group>";
+		};
+		888270DE227FF47B008817DF /* Music */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Music;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,9 +246,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				888270E3227FF519008817DF /* Music.m4a in Resources */,
 				883E073C227F326A00273107 /* LaunchScreen.storyboard in Resources */,
 				883E0739227F326A00273107 /* Assets.xcassets in Resources */,
 				883E0737227F326800273107 /* Main.storyboard in Resources */,
+				888270E4227FF519008817DF /* Metal.m4a in Resources */,
+				888270E2227FF519008817DF /* Rock.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
