@@ -39,6 +39,14 @@ class ViewController: UIViewController {
         labelVolume.text = "Volume: \(Int (sender.value * 100))%"
     }
     @IBAction func sliderAudioSetting(_ sender: UISlider) {
+        if sender.value > 0.66 {
+            sender.value = 1
+        } else if sender.value < 0.33 {
+            sender.value = 0
+        } else
+        {
+            sender.value = 0.5
+        }
     }
     
     //MARK: - Buttons

@@ -34,7 +34,7 @@
                                     <action selector="switchRepeat:" destination="BYZ-38-t0r" eventType="valueChanged" id="jyd-xL-Bcy"/>
                                 </connections>
                             </switch>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="RPT-BS-2rY">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="RPT-BS-2rY">
                                 <rect key="frame" x="14" y="291" width="386" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="5GX-OW-iPU"/>
@@ -213,31 +213,31 @@
                                     <constraint firstAttribute="height" constant="60" id="cMu-8Y-NC8"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Left" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vsv-a7-ZfS">
-                                <rect key="frame" x="16" y="265" width="30" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Left" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vsv-a7-ZfS">
+                                <rect key="frame" x="16" y="265" width="60" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="NF8-su-Wn4"/>
-                                    <constraint firstAttribute="width" constant="30" id="x4N-7m-1fu"/>
+                                    <constraint firstAttribute="width" constant="60" id="x4N-7m-1fu"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Right" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xm5-s5-xbX">
-                                <rect key="frame" x="358" y="265" width="40" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Right" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xm5-s5-xbX">
+                                <rect key="frame" x="338" y="265" width="60" height="21"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="0EQ-eT-sbn"/>
                                     <constraint firstAttribute="height" constant="21" id="eLP-Uz-2I8"/>
-                                    <constraint firstAttribute="width" constant="40" id="hm5-4M-IDl"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Middle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0S-du-0Eh">
-                                <rect key="frame" x="181" y="265" width="68" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Middle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0S-du-0Eh">
+                                <rect key="frame" x="155" y="265" width="120" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="ra1-ef-fds"/>
-                                    <constraint firstAttribute="width" constant="68" id="tYD-EL-QS1"/>
+                                    <constraint firstAttribute="width" constant="120" id="tYD-EL-QS1"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <nil key="textColor"/>
