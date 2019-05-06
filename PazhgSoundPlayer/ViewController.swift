@@ -9,7 +9,9 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    
+    //MARK: - Outlets
     @IBOutlet weak var labelRepeat: UILabel!
     @IBOutlet weak var labelSpeed: UILabel!
     @IBOutlet weak var labelVolume: UILabel!
@@ -24,10 +26,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var switchRepeat: UISwitch!
     
     @IBOutlet weak var textviewLog: UITextView!
+    @IBOutlet weak var stepperSpeed: UIStepper!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        labelSpeed.text = "Speed: Normal(1.0x)"
+        
     }
 
     //MARK: - Switch
@@ -48,10 +54,43 @@ class ViewController: UIViewController {
             sender.value = 0.5
         }
     }
+    //MARK: - Stepper
     
-    //MARK: - Buttons
     @IBAction func stepperSpeed(_ sender: UIStepper) {
+        
+        var tempString : String?
+        let currentValue : Int = Int ( sender.value )
+        
+        switch currentValue {
+        case 0 :
+            tempString = "Very Slow (0.3x)"
+        case 1 :
+             tempString = "Slow (0.5x)"
+        case 2 :
+             tempString = "Normal (1.0x)"
+        case 3 :
+             tempString = "Fast (0.3x)"
+        default:
+             tempString = "Very Fast (0.3x)"
+        }
+        labelSpeed.text = "Speed: \(tempString!)"
+
+//        switch stepSpeed {
+//        case .veryFast:
+//            labelSpeed.text?.append("\(speed.fast)")
+//        case .fast:
+//            labelSpeed.text?.append("Fast (1.5x)")
+//        case .normal:
+//            labelSpeed.text?.append("Normal (1x)")
+//        case .slow:
+//            labelSpeed.text?.append("Slow (0.5x)")
+//        case .verySlow:
+//            labelSpeed.text?.append("Very Slow (0.1x)")
+//        }
+
     }
+    //MARK: - Buttons
+   
 
     @IBAction func buttonPrevious(_ sender: UIButton) {
     }
