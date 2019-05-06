@@ -36,6 +36,7 @@ class ViewController: UIViewController {
     
     //MARK: - Sliders
     @IBAction func sliderVolume(_ sender: UISlider) {
+        labelVolume.text = "Volume: \(Int (sender.value * 100))%"
     }
     @IBAction func sliderAudioSetting(_ sender: UISlider) {
     }
