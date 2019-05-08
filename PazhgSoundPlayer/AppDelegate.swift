@@ -7,8 +7,13 @@
 //
 
 import UIKit
+import AVFoundation
+
+//Global Variable
+//use an AVAudioSession object to configure app’s audio session.
 
 @UIApplicationMain
+
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
@@ -16,7 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        return true
+        
+
+            return true
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

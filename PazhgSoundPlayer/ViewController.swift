@@ -5,8 +5,8 @@
 //  Created by Pazhg on 2/15/1398 AP.
 //  Copyright © 1398 Pazhg. All rights reserved.
 //
-
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     
@@ -28,14 +28,24 @@ class ViewController: UIViewController {
     @IBOutlet weak var textviewLog: UITextView!
     @IBOutlet weak var stepperSpeed: UIStepper!
     
+    
+    //MARK: - Variables
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         labelSpeed.text = "Speed: Normal(1.0x)"
+        
+        
+        
+       
+        
     }
     
-    //MARK- : TextViewAppend
     
+    
+    //MARK- : TextViewAppend
     func textview ( change with : String ) {
         textviewLog.text.append( "\(with)\n")
     }
@@ -47,9 +57,7 @@ class ViewController: UIViewController {
         let string : String = sender.titleForSegment(at: index)!
         
         labelAudioFile.text = "Audio File: \(string)"
-        
         textview(change: "Audio Files: \(string)")
-        
     }
     
     //MARK: - Switch
@@ -81,8 +89,8 @@ class ViewController: UIViewController {
         }
         textview(change: "Setting has changed!")
     }
-    //MARK: - Stepper
     
+    //MARK: - Stepper
     @IBAction func stepperSpeed(_ sender: UIStepper) {
         
         var tempString : String?
@@ -104,8 +112,6 @@ class ViewController: UIViewController {
         textview(change: "Speed: \(tempString!)")
     }
     //MARK: - Buttons
-   
-
     @IBAction func buttonPrevious(_ sender: UIButton) {
         textview(change: "Previous")
     }
