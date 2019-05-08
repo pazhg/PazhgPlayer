@@ -38,8 +38,25 @@ class ViewController: UIViewController {
         labelSpeed.text = "Speed: Normal(1.0x)"
         
         
+//        let categoryOption : AVAudioSession.CategoryOptions = AVAudioSession.CategoryOptions.init(arrayLiteral: [AVAudioSession.CategoryOptions.allowBluetooth])
+//
+        guard audioSession != nil else {
+            textview(change: "AudioSession is not available!")
+            return
+        }
+        textview(change: "Play background is available.")
+        textview(change: "Another app currently playing audio: \( audioSession!.isOtherAudioPlaying)")
+        textview(change: "another application is playing audio: \( audioSession!.secondaryAudioShouldBeSilencedHint)")
         
-       
+        
+        textview(change: "Output:\(audioSession!.currentRoute.outputs)")
+        textview(change: "Input :\(audioSession!.currentRoute.inputs)")
+        textview(change: "Input Available: \(audioSession!.isInputAvailable)")
+        textview(change: "Working with AudioChannels\nInput number of channels: \(audioSession!.inputNumberOfChannels)")
+        textview(change: "Max of number of channels:\(audioSession!.maximumInputNumberOfChannels)")
+        textview(change: "Output number of channels: \(audioSession!.outputNumberOfChannels)")
+        
+        textview(change: "Maximum of number of Channels: \(audioSession!.maximumOutputNumberOfChannels)")
         
     }
     
@@ -75,6 +92,8 @@ class ViewController: UIViewController {
         let volume : Int = Int (sender.value * 100 )
         
         labelVolume.text = "Volume: \(volume))%"
+        
+        
         textview(change: "Current Volume: \(volume)")
         
     }
