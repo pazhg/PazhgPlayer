@@ -58,10 +58,13 @@
                                     <constraint firstAttribute="height" constant="28" id="GX9-gu-b0T"/>
                                 </constraints>
                                 <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
-                                    <segment title="Soft Music"/>
+                                    <segment title="Classic"/>
+                                    <segment title="Rock"/>
+                                    <segment title="Metal"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segmentFiles:" destination="BYZ-38-t0r" eventType="valueChanged" id="gpG-lu-XKQ"/>
+                                </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speed: Normal (1.0x)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldj-sS-gXu">
                                 <rect key="frame" x="16" y="391" width="382" height="21"/>
@@ -163,6 +166,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <state key="normal" title="⏪"/>
+                                        <connections>
+                                            <action selector="buttonBackward:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RnN-Se-ixU"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YlD-DD-Twk">
                                         <rect key="frame" x="136" y="0.0" width="45" height="60"/>
@@ -309,6 +315,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="labelAudioFile" destination="Kwu-cp-b4K" id="cXD-gX-yF9"/>
                         <outlet property="labelRepeat" destination="D2P-DM-aWV" id="l3j-Xz-6Pw"/>
                         <outlet property="labelSpeed" destination="ldj-sS-gXu" id="RMR-4F-Oay"/>
                         <outlet property="labelVolume" destination="UCo-XY-tec" id="IEi-o5-Cs5"/>

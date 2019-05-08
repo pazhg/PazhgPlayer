@@ -10,11 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
     //MARK: - Outlets
     @IBOutlet weak var labelRepeat: UILabel!
     @IBOutlet weak var labelSpeed: UILabel!
     @IBOutlet weak var labelVolume: UILabel!
+    @IBOutlet weak var labelAudioFile: UILabel!
     
     @IBOutlet weak var segmentAudioFile: UISegmentedControl!
     
@@ -31,18 +31,44 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
         labelSpeed.text = "Speed: Normal(1.0x)"
+    }
+    
+    //MARK- : TextViewAppend
+    
+    func textview ( change with : String ) {
+        textviewLog.text.append( "\(with)\n")
+    }
+    
+    //MARK- :Segmented Controls
+    @IBAction func segmentFiles(_ sender: UISegmentedControl) {
+        
+        let index = sender.selectedSegmentIndex
+        let string : String = sender.titleForSegment(at: index)!
+        
+        labelAudioFile.text = "Audio File: \(string)"
+        
+        textview(change: "Audio Files: \(string)")
         
     }
-
+    
     //MARK: - Switch
     @IBAction func switchRepeat(_ sender: UISwitch) {
+        if switchRepeat.isOn {
+            textview(change: "Repeat: Yes")
+        } else {
+            textview(change: "Repeat: No")
+        }
     }
     
     //MARK: - Sliders
     @IBAction func sliderVolume(_ sender: UISlider) {
-        labelVolume.text = "Volume: \(Int (sender.value * 100))%"
+        
+        let volume : Int = Int (sender.value * 100 )
+        
+        labelVolume.text = "Volume: \(volume))%"
+        textview(change: "Current Volume: \(volume)")
+        
     }
     @IBAction func sliderAudioSetting(_ sender: UISlider) {
         if sender.value > 0.66 {
@@ -53,6 +79,7 @@ class ViewController: UIViewController {
         {
             sender.value = 0.5
         }
+        textview(change: "Setting has changed!")
     }
     //MARK: - Stepper
     
@@ -74,37 +101,37 @@ class ViewController: UIViewController {
              tempString = "Very Fast (0.3x)"
         }
         labelSpeed.text = "Speed: \(tempString!)"
-
-//        switch stepSpeed {
-//        case .veryFast:
-//            labelSpeed.text?.append("\(speed.fast)")
-//        case .fast:
-//            labelSpeed.text?.append("Fast (1.5x)")
-//        case .normal:
-//            labelSpeed.text?.append("Normal (1x)")
-//        case .slow:
-//            labelSpeed.text?.append("Slow (0.5x)")
-//        case .verySlow:
-//            labelSpeed.text?.append("Very Slow (0.1x)")
-//        }
-
+        textview(change: "Speed: \(tempString!)")
     }
     //MARK: - Buttons
    
 
     @IBAction func buttonPrevious(_ sender: UIButton) {
+        textview(change: "Previous")
     }
     
     @IBAction func buttonPlayPause(_ sender: UIButton) {
+        textview(change: "Pause/Play")
+
     }
     
     @IBAction func buttonStop(_ sender: UIButton) {
+        textview(change: "Stop")
+
     }
     
     @IBAction func buttonForward(_ sender: UIButton) {
+        textview(change: "Forward")
+
+    }
+    
+    @IBAction func buttonBackward(_ sender: UIButton) {
+        textview(change: "Backward")
+
     }
     
     @IBAction func buttonNext(_ sender: UIButton) {
+        textview(change: "Next")
     }
 }
 
